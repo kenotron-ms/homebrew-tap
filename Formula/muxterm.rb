@@ -5,21 +5,21 @@
 class Muxterm < Formula
   desc "Web-first terminal multiplexer with MCP agent integration"
   homepage "https://github.com/kenotron-ms/muxterm"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.0/muxterm_darwin_amd64.tar.gz"
-      sha256 "370cf0514abd722cff64384ab3a29097439b2bb12c7f13caea3a210b305fffe5"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.1/muxterm_darwin_amd64.tar.gz"
+      sha256 "dee0e04e16d329b910b32288485e53e96679c993f73f9adfeb5f574fae24a412"
 
       define_method(:install) do
         bin.install "muxterm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.0/muxterm_darwin_arm64.tar.gz"
-      sha256 "59faae1d3607921c17862b34310ca25b42912be6e8d472b66aadb83aa0247bb9"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.1/muxterm_darwin_arm64.tar.gz"
+      sha256 "51052636eb35a2b171b7d7da52e2406df86ea03216f424b608e6833522cc6ffe"
 
       define_method(:install) do
         bin.install "muxterm"
@@ -29,15 +29,15 @@ class Muxterm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.0/muxterm_linux_amd64.tar.gz"
-      sha256 "97c89bb0c3fa418858f4d511be632016d46031511e180e7a1c64b1838c454386"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.1/muxterm_linux_amd64.tar.gz"
+      sha256 "d4651e3d614d3e14dc4148c12fd7bf36c8d7c8f990edb357d215cfd5dd2f1961"
       define_method(:install) do
         bin.install "muxterm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.0/muxterm_linux_arm64.tar.gz"
-      sha256 "e285c572868a9360a2e727e6af86bd958d20c93c0ece8565855fdcad5643a576"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.5.1/muxterm_linux_arm64.tar.gz"
+      sha256 "30152a2c4e9c85ba695aa112beb536b1221cfbd7ecd7d41554bdbad41ea87946"
       define_method(:install) do
         bin.install "muxterm"
       end
