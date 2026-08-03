@@ -5,21 +5,21 @@
 class Muxterm < Formula
   desc "Web-first terminal multiplexer with MCP agent integration"
   homepage "https://github.com/kenotron-ms/muxterm"
-  version "0.7.1"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.7.1/muxterm_darwin_amd64.tar.gz"
-      sha256 "0ae6b0a9df36ef6208bcaf24f7f98215c78340220ee873089824ad9c34040e5b"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.8.0/muxterm_darwin_amd64.tar.gz"
+      sha256 "e5bcf007e88f413ea8c2f1aa6dca5b61ce99d1fa01ecfa11c22bd1bfcedd2c8b"
 
       define_method(:install) do
         bin.install "muxterm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.7.1/muxterm_darwin_arm64.tar.gz"
-      sha256 "c1889dac83d610668e3784e67ebc36390bf655cd0dc4d1df422840861f92e723"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.8.0/muxterm_darwin_arm64.tar.gz"
+      sha256 "af0acc4e82b171ccec9dcebe48c31a51ead0e00655ce9383d21e80c9a7d5b54d"
 
       define_method(:install) do
         bin.install "muxterm"
@@ -29,15 +29,8 @@ class Muxterm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.7.1/muxterm_linux_amd64.tar.gz"
-      sha256 "e6b2423e4841ed8384d363397c494456b89be991aa59ce1af25b8a17e4ad199a"
-      define_method(:install) do
-        bin.install "muxterm"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.7.1/muxterm_linux_arm64.tar.gz"
-      sha256 "88a9cb0f1e4b0ada2c4bfe8d199e91f60509a82ab9744c61d2d554c0f607e66f"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.8.0/muxterm_linux_amd64.tar.gz"
+      sha256 "89dd50467fbdbabc96d40a47383e401ab152c5b29dcbbf2fd8d62898fd7a16b8"
       define_method(:install) do
         bin.install "muxterm"
       end
