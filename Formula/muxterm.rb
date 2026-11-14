@@ -5,21 +5,21 @@
 class Muxterm < Formula
   desc "Web-first terminal multiplexer with MCP agent integration"
   homepage "https://github.com/kenotron-ms/muxterm"
-  version "0.52.89"
+  version "0.52.90"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.89/muxterm_darwin_amd64.tar.gz"
-      sha256 "f3dbfca94a1635a2221f945a3ff345b70a257a6839a1afe71f0780f7ac91bd20"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.90/muxterm_darwin_amd64.tar.gz"
+      sha256 "3fac8ff82faa09700a8ed1a2b6ec58339c5aa9f3db423749c6c48328f9e7c489"
 
       define_method(:install) do
         bin.install "muxterm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.89/muxterm_darwin_arm64.tar.gz"
-      sha256 "3f10903052d7a102ceb3de77705fd7ea8b83e6258e87cf3c56d90f25ce219659"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.90/muxterm_darwin_arm64.tar.gz"
+      sha256 "ec00dca4ca926dbdf901092149b4bae943c15c3edad8d0b6a4818fa2967a02c4"
 
       define_method(:install) do
         bin.install "muxterm"
@@ -29,8 +29,8 @@ class Muxterm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.89/muxterm_linux_amd64.tar.gz"
-      sha256 "17b41b668b24cf242a585ae53f258c37b16aa3fbde025a980db813af39ccfc77"
+      url "https://github.com/kenotron-ms/muxterm/releases/download/v0.52.90/muxterm_linux_amd64.tar.gz"
+      sha256 "28720724131b9b35bc8dc3ece86a420b0135ae89835e9ef9c5bc1ce15e53d7a0"
       define_method(:install) do
         bin.install "muxterm"
       end
